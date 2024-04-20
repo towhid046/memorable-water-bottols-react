@@ -6,6 +6,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Bottols from "./components/Bottols/Bottols";
 import AddBottol from "./components/AddBottol/AddBottol.jsx";
+import UpdateBottol from "./components/UpdateBottol/UpdateBottol.jsx";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,12 @@ const routes = createBrowserRouter([
       {
         path: "/add-bottol",
         element: <AddBottol />,
+      },
+      {
+        path: "/update-bottol/:id",
+        element: <UpdateBottol />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/update-bottol/${params.id}`),
       },
     ],
   },

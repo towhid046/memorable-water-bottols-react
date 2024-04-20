@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
+import { LuPencilLine } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const Bottol = ({ bottol, handelAddToCart, handleRemoveBottol }) => {
   const { title, img, price, _id } = bottol;
 
   return (
-    <div className="card  bg-base-100 border">
+    <div className="card  bg-base-100 border relative">
       <figure className="px-10 pt-10">
         <img src={img} alt="Shoes" className="rounded-xl" />
       </figure>
@@ -23,6 +25,11 @@ const Bottol = ({ bottol, handelAddToCart, handleRemoveBottol }) => {
           >
             Remove
           </button>
+          <Link to={`/update-bottol/${_id}`}>
+            <button className="btn btn-info">
+              Update <LuPencilLine />{" "}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
