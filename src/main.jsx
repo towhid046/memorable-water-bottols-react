@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
         path: "/update-bottol/:id",
         element: <UpdateBottol />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/update-bottol/${params.id}`),
+          fetch(`http://localhost:5000/bottols/${params.id}`),
       },
     ],
   },
