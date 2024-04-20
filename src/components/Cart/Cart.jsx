@@ -4,8 +4,8 @@ const Cart = ({ bottol, handelToRemoveItem }) => {
     <div>
       <li>
         {" "}
-        <span>{bottol.name + ' $' + bottol.price + '  '} </span>
-        <button onClick={() => handelToRemoveItem(bottol.id)}>Remove</button>
+        <span>{bottol.title + ' $' + bottol.price + '  '} </span>
+        <button onClick={() => handelToRemoveItem(bottol._id)}>Remove</button>
       </li>
     </div>
   );
