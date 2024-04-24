@@ -47,7 +47,7 @@ const Bottols = () => {
   };
 
   const handleRemoveBottol = (id) => {
-    fetch(`http://localhost:5000/bottols/${id}`, {
+    fetch(`https://memorable-water-bottols-server.vercel.app/bottols/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

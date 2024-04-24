@@ -13,7 +13,7 @@ const UpdateBottol = () => {
     const price = form.price.value;
     const updatedBottol = { photoUrl, title, price };
 
-    fetch(`http://localhost:5000/update-bottol/${bottol._id}`, {
+    fetch(`https://memorable-water-bottols-server.vercel.app/update-bottol/${bottol._id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updatedBottol),
